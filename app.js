@@ -12,33 +12,24 @@ const details =[
     {
     name: 'sundara',
     age:22,
-    place:'pothencode'
+    place:'Pothencode'
+},
+{
+    name: 'sundara',
+    age:22,
+    place:'Attingal'
 },
 {
     name: 'karthik',
     age:21,
-    place:'attingal'
+    place:'Attingal'
 }
 
 ]
 
 
 app.get('/details', (req,res) =>{
-
     res.json(details)
-})
-
-
-// authenticate user
-app.post('/login',(req,res) =>{
-    
-const username = 'sundara'
-const user = {name:username}
-
-const accessToken = jwt.sign(user,process.env.ACCESS_TOKEN)
-
-res.json({accessToken: accessToken})
-
 })
 
 
